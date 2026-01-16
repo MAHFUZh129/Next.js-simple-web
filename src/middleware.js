@@ -1,13 +1,22 @@
-import { NextResponse } from 'next/server';
 
-export function middleware(req) {
-  const auth = req.cookies.get('auth');
 
-  if (!auth && req.nextUrl.pathname.startsWith('/jobs')) {
-    return NextResponse.redirect(new URL('/login', req.url));
+import { NextResponse } from "next/server";
+
+export function middleware(request) {
+  const isLoggedIn = request.cookies.get("auth")?.value === "true";
+
+  const protectedRoutes = ["/add-job"];
+
+  const pathname = request.nextUrl.pathname;
+
+  if (protectedRoutes.includes(pathname) && !isLoggedIn) {
+    return NextResponse.redirect(new URL("/login", request.url));
   }
+
+  return NextResponse.next();
 }
 
+// কোন route এ middleware চলবে
 export const config = {
-  matcher: ['/jobs/:path*'],
+  matcher: ["/add-job"],
 };

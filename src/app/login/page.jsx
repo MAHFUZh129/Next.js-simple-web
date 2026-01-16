@@ -19,7 +19,7 @@ export default function LoginPage() {
         });
 
         if (res.ok) {
-            router.push('/jobs');
+            router.push('/');
             toast.success("Login successful!!")
             router.refresh()
         } else {

@@ -10,6 +10,18 @@ export const getJobs = async () => {
 
     return jobs;
 }
+export const addJobs = async (job) => {
+ 
+    const jobsCollection = dbConnect(collections.JOBS);
+
+    const result = await jobsCollection.insertOne({
+      ...job,
+      createdAt: new Date(),
+    });
+
+    return { success: true };
+  
+};
 
 export const getSingleJob= async (id) => {
 

@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 const links = [
   { name: "Home", path: "/" },
   { name: "Jobs", path: "/jobs" },
+  { name: " Add Job", path: "/add-job" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" },
