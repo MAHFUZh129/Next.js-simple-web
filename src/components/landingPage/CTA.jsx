@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section className="py-20 bg-blue-600 text-white text-center">
+    <div className="py-20 bg-blue-600 text-white text-center">
       <h2 className="text-3xl font-bold">
         Ready to Take the Next Step?
       </h2>
@@ -15,6 +15,6 @@ export default function CTA() {
       >
         Get Started
       </Link>
-    </section>
+    </div>
   );
 }

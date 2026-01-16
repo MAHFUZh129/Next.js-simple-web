@@ -3,19 +3,23 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Top Section */}
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
+          {/* logo */}
           <div>
-            <h2 className="text-2xl font-bold text-white">SCIC</h2>
+            <Link href="/" className="text-2xl flex gap-2 items-center font-bold text-blue-600">
+        <img className="h-14 w-14" src="/image.png" alt="" />
+        <p className="font-extrabold ">jOB<span className="text-white font-extrabold italic">HUB</span></p>
+           
+        </Link>
             <p className="mt-3 text-sm text-gray-400">
               Building modern, scalable, and secure web applications using
               Next.js and modern technologies.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Links */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">
               Quick Links
@@ -48,7 +52,7 @@ export default function Footer() {
             </h3>
             <p className="text-sm text-gray-400">Dhaka, Bangladesh</p>
             <p className="text-sm text-gray-400 mt-1">
-              Email: support@scic.com
+              Email: support@jobhub.com
             </p>
             <p className="text-sm text-gray-400 mt-1">
               Phone: +880 1234-567890
@@ -59,7 +63,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} SCIC. All rights reserved.
+            © {new Date().getFullYear()} JOBHUB. All rights reserved.
           </p>
 
           <div className="flex space-x-4 mt-4 md:mt-0">

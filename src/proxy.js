@@ -2,7 +2,7 @@
 
 import { NextResponse } from "next/server";
 
-export function middleware(request) {
+export function proxy(request) {
   const isLoggedIn = request.cookies.get("auth")?.value === "true";
 
   const protectedRoutes = ["/add-job"];

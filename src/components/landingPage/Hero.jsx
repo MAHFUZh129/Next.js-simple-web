@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
       <div className="max-w-7xl mx-auto px-4 py-24 flex flex-col md:flex-row items-center gap-10">
         
-        {/* Left Content */}
+        {/* left */}
         <div className="flex-1">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
             Find Your Dream Job <br />
@@ -37,7 +37,7 @@ export default function Hero() {
         {/* Right Image */}
         <div className="flex-1">
           <img
-            src="https://i.ibb.co/9H7FzQm/job-search.png"
+            src="https://i.ibb.co.com/zhp8tn68/image.png"
             alt="Job Search"
             className="w-full max-w-md mx-auto"
           />
